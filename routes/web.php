@@ -15,14 +15,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->middleware(['auth:sanctum']);
 
 Route::resource('company', 'App\Http\Controllers\CompanieController')->middleware(['auth:sanctum']);
 Route::resource('employee', 'App\Http\Controllers\EmployeeController')->middleware(['auth:sanctum']);
 
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('welcome');
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
