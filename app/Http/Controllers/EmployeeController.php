@@ -19,7 +19,7 @@ class EmployeeController extends Controller
 
         $employee = Employee::select('employees.*', 'companies.name as nombre_empresa')->
         join('companies', 'employees.company', '=', 'companies.id')->
-        get();
+        paginate(10)->setPath('employee');
         return view('employee.index')
         ->with('employees', $employee);
     }

@@ -55,6 +55,14 @@
                 </tr>
                 @endforeach
             </tbody>
+
+            <tfoot>
+                <tr>
+                    <td colspan="4" class="text-center">
+                        {!! $employees->render() !!}
+                    </td>
+                </tr>
+            </tfoot>
         </table>
     </div>
 </div>

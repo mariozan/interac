@@ -15,7 +15,7 @@ class CompanieController extends Controller
     */
     public function index()
     {
-        $companie = Companie::all();
+        $companie = Companie::paginate(1)->setPath('company');
         return view('companie.index')
         ->with('companies', $companie);
     }

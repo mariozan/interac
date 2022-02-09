@@ -60,6 +60,13 @@
                 </tr>
                 @endforeach
             </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4" class="text-center">
+                        {!! $companies->render() !!}
+                    </td>
+                </tr>
+            </tfoot>
         </table>
     </div>
 </div>
